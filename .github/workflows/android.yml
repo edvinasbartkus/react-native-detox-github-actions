@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build:
     runs-on: macos-latest
+    timeout-minutes: 15
 
     steps:
     - name: Checkout
