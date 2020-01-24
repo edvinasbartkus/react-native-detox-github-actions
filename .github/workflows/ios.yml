@@ -9,7 +9,6 @@ jobs:
 
     env:
       DEVELOPER_DIR: /Applications/Xcode_11.2.app
-      RN_SRC_EXT: e2e.js
 
     steps:
     - name: Checkout
@@ -29,7 +28,7 @@ jobs:
 
     - name: Rebuild detox
       if: steps.cache.outputs.cache-hit == 'true'
-      run: yarn detox-setup
+      run: yarn detox clean-framework-cache && yarn detox build-framework-cache
 
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
