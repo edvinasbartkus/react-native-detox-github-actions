@@ -30,7 +30,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
-          testID='scroll'
+          testID="scroll"
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
@@ -62,7 +62,7 @@ const App: () => React$Node = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Learn More</Text>
               <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
+                Read the docs to discover what to do next: asdasds
               </Text>
             </View>
             <LearnMoreLinks />
