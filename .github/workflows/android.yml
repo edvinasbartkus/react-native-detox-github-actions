@@ -16,11 +16,11 @@ jobs:
     - name: Node
       uses: actions/setup-node@v1
 
-    - name: Use specific Java version for sdkmanager to work
-      uses: joschi/setup-jdk@v1
+    - name: Install Java JDK
+      uses: actions/setup-java@v3
       with:
-        java-version: 'openjdk8'
-        architecture: 'x64'
+        distribution: 'temurin'
+        java-version: '8'
 
     - name: Download Android Emulator Image
       run: |
