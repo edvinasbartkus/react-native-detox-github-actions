@@ -48,3 +48,10 @@ jobs:
 
     - name: Android Detox
       run: yarn start & yarn test-detox-android
+
+    - name: Store Detox artifacts on test failure
+      uses: actions/upload-artifact@v3
+      if: failure()
+      with:
+        name: detox-artifacts
+        path: artifacts # Default path for Detox artifacts
